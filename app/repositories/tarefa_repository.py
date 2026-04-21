@@ -15,11 +15,11 @@ class TarefaRepository:
         conn.close()
         return dict(tarefa) if tarefa else None
 
-    def criar(self, titulo, descricao=""):
+    def criar(self, titulo, descricao="", prioridade="media"):
         conn = get_connection()
         cursor = conn.execute(
-            "INSERT INTO tarefas (titulo, descricao) VALUES (?, ?)",
-            (titulo, descricao),
+            "INSERT INTO tarefas (titulo, descricao, prioridade) VALUES (?, ?, ?)",
+            (titulo, descricao, prioridade),
         )
         conn.commit()
         tarefa_id = cursor.lastrowid
