@@ -154,7 +154,7 @@ docs/
 python -m pytest tests/ -v
 ```
 
-Cobertura atual: 29 testes (11 de API + 13 de Service + 5 de PriorityAdvisor).
+Cobertura atual: 34 testes (11 de API + 13 de Service + 10 de PriorityAdvisor).
 
 ## Documentacao
 
