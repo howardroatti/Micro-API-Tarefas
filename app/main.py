@@ -1,3 +1,5 @@
+"""Entry point da aplicacao FastAPI."""
+
 from fastapi import FastAPI
 from app.database import init_db
 from app.controllers.tarefa_controller import router

@@ -1,3 +1,5 @@
+"""Conexao e inicializacao do banco de dados SQLite."""
+
 import sqlite3
 import os
 
@@ -5,12 +7,14 @@ DB_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), "tarefas.db")
 
 
 def get_connection():
+    """Retorna uma conexao SQLite com row_factory configurado."""
     conn = sqlite3.connect(DB_PATH)
     conn.row_factory = sqlite3.Row
     return conn
 
 
 def init_db():
+    """Cria a tabela de tarefas caso nao exista."""
     conn = get_connection()
     conn.execute("""
         CREATE TABLE IF NOT EXISTS tarefas (
