@@ -1,0 +1,14 @@
+"""Entry point da aplicacao FastAPI."""
+
+from fastapi import FastAPI
+from app.database import init_db
+from app.controllers.tarefa_controller import router
+
+app = FastAPI(title="Micro-API de Tarefas")
+app.include_router(router)
+
+init_db()
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
