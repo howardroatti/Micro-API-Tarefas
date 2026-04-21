@@ -1,4 +1,4 @@
-from app.model import get_connection
+from app.database import get_connection
 
 
 class TarefaRepository:

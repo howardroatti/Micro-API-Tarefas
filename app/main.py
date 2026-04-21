@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.model import init_db
-from app.controller.tarefa_controller import router
+from app.database import init_db
+from app.controllers.tarefa_controller import router
 
 app = FastAPI(title="Micro-API de Tarefas")
 app.include_router(router)

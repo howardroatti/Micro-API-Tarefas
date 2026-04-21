@@ -1,6 +1,6 @@
 from fastapi import APIRouter
-from app.schemas import TarefaCreate, TarefaUpdate, TarefaResponse
-from app.service.tarefa_service import TarefaService
+from app.models.tarefa import TarefaCreate, TarefaUpdate, TarefaResponse
+from app.services.tarefa_service import TarefaService
 
 router = APIRouter(prefix="/api/tarefas", tags=["Tarefas"])
 service = TarefaService()

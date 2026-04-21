@@ -1,6 +1,6 @@
 from fastapi import HTTPException
-from app.repository.tarefa_repository import TarefaRepository
-from app.schemas import TarefaCreate, TarefaUpdate
+from app.repositories.tarefa_repository import TarefaRepository
+from app.models.tarefa import TarefaCreate, TarefaUpdate
 
 
 class TarefaService:
