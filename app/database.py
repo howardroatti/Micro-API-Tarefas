@@ -17,7 +17,9 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             titulo TEXT NOT NULL,
             descricao TEXT DEFAULT '',
-            concluida BOOLEAN DEFAULT 0
+            concluida BOOLEAN DEFAULT 0,
+            prioridade TEXT DEFAULT 'media',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
     conn.commit()
