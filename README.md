@@ -15,6 +15,7 @@ Projeto desenvolvido como miniprojeto do curso de Engenharia de Software com Gen
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Testes](#testes)
 - [Documentacao](#documentacao)
+- [Como a IA foi usada](#como-a-ia-foi-usada-no-processo)
 - [Limitacoes e Proximos Passos](#limitacoes-e-proximos-passos)
 
 ## Stack
@@ -133,6 +134,7 @@ app/
 
 tests/
 ├── test_api.py              # Testes de integracao (endpoints)
+├── test_tarefa_service.py   # Testes unitarios (camada de servico)
 └── test_priority_advisor.py # Testes unitarios (fallback)
 
 docs/
@@ -152,7 +154,7 @@ docs/
 python -m pytest tests/ -v
 ```
 
-Cobertura atual: 16 testes (11 de API + 5 de PriorityAdvisor).
+Cobertura atual: 29 testes (11 de API + 13 de Service + 5 de PriorityAdvisor).
 
 ## Documentacao
 
@@ -161,6 +163,18 @@ Cobertura atual: 16 testes (11 de API + 5 de PriorityAdvisor).
 - [Prompts](docs/prompts.md) — prompts usados com IA
 - [Escopo do MVP](docs/escopo-mvp.md) — funcionalidades e criterios
 - [Backlog](docs/backlog.md) — itens priorizados
+
+## Como a IA foi usada no processo
+
+A IA (Claude Code) atuou como copiloto durante todo o desenvolvimento:
+
+- **Arquitetura**: auxiliou na definicao da estrutura em camadas (Controller → Service → Repository) e na organizacao dos diretorios do projeto.
+- **Implementacao**: gerou o codigo base de cada camada a partir de prompts estruturados, seguindo o padrao do curso (Contexto, Objetivo, Estilo, Resposta).
+- **PriorityAdvisor**: implementou a integracao com LLM (OpenAI) e o fallback local por heuristica de palavras-chave, garantindo que o CRUD nunca quebre por falha da IA.
+- **Testes**: criou a suite de testes unitarios e de integracao com pytest, cobrindo os cenarios de sucesso e erro.
+- **Refatoracao**: renomeou diretorios e arquivos para alinhar com as convencoes do curso, ajustou validacoes do Pydantic e adicionou docstrings.
+- **Documentacao**: gerou diagramas Mermaid, documentacao de decisoes tecnicas, escopo do MVP, backlog priorizado e este README.
+- **Revisao**: cada saida da IA foi revisada criticamente antes de ser incorporada ao projeto — nenhum codigo foi aceito sem leitura e validacao manual.
 
 ## Limitacoes e Proximos Passos
 
