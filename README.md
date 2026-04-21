@@ -47,6 +47,8 @@ source .venv/bin/activate  # Linux/Mac
 
 # Instalar dependencias
 pip install -r requirements.txt
+# Ou via Makefile:
+make install
 ```
 
 ## Uso
@@ -54,6 +56,8 @@ pip install -r requirements.txt
 ```bash
 # Rodar a API
 python -m app.main
+# Ou via Makefile:
+make run
 ```
 
 A API estara disponivel em `http://localhost:8000`.
@@ -152,6 +156,8 @@ docs/
 ```bash
 # Rodar todos os testes
 python -m pytest tests/ -v
+# Ou via Makefile:
+make test
 ```
 
 Cobertura atual: 34 testes (11 de API + 13 de Service + 10 de PriorityAdvisor).
@@ -191,3 +197,7 @@ A IA (Claude Code) atuou como copiloto durante todo o desenvolvimento:
 - Testes de integracao com a API de IA (mock)
 - CI/CD pipeline
 - Deploy com Docker
+
+## Licenca
+
+Este projeto esta licenciado sob a [MIT License](LICENSE).
