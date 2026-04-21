@@ -121,4 +121,54 @@ Ferramenta: Claude Code (Anthropic) — modelo Claude Opus
 
 ---
 
+---
+
+# Capitulo 5 — Prompts para Codex/Copilot
+
+## Prompt 1 — Makefile
+
+> Contexto: Projeto FastAPI com comandos de instalar dependencias, executar API e rodar testes.
+> Objetivo: Gerar Makefile com targets install, run e test.
+> Estilo: Simples e portavel.
+> Resposta: Conteudo completo de Makefile.
+
+---
+
+## Prompt 2 — .env.example
+
+> Contexto: O projeto usa integracao opcional de LLM.
+> Objetivo: Criar arquivo .env.example com variaveis necessarias e valores placeholder seguros.
+> Estilo: Minimalista.
+> Resposta: Apenas conteudo do arquivo.
+
+---
+
+## Prompt 3 — Revisao de README
+
+> Analise meu README e responda:
+> 1) O que falta para ser reproduzivel em maquina limpa?
+> 2) Quais secoes estao fracas para onboarding tecnico?
+> 3) Como melhorar a secao de uso da IA?
+> Resposta em checklist objetivo.
+
+---
+
+## Prompt 4 — Checklist de release
+
+> Contexto: Vou publicar a versao v1.0.0 no GitHub.
+> Objetivo: Gerar checklist final com itens tecnicos e de documentacao para release.
+> Estilo: Checkbox Markdown.
+> Resposta: Lista completa.
+
+---
+
+## Prompt 5 — Script de demo tecnica
+
+> Contexto: Preciso apresentar o MVP em 5 minutos para stakeholders tecnicos.
+> Objetivo: Criar roteiro com tempos por bloco e comandos para mostrar no terminal.
+> Estilo: Direto, sem marketing.
+> Resposta: Roteiro em Markdown.
+
+---
+
 > **Nota:** Todos os prompts passaram por revisao humana antes de serem aceitos no codigo. A IA foi usada como copiloto de desenvolvimento (Modo 1), nao como substituto do desenvolvedor.
